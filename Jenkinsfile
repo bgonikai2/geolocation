@@ -8,7 +8,7 @@ pipeline {
 }
     
     stages {
-        stage('maven package') {
+        stage('Maven Package') {
             steps {
                 sh 'mvn clean'
                 sh 'mvn install'
@@ -16,13 +16,13 @@ pipeline {
                 sleep 5
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'mvn test'   
             }
         }
 
-        stage('deploy') {
+        stage('Deploy') {
             steps {
                 echo 'deploy'
                 
